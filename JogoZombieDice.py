@@ -1,7 +1,8 @@
 import random
 
-print("ZOMBIE DICE")
+print("---------- ZOMBIE DICE -----------")
 print("Seja bem-vindo ao jogo Zombie Dice")
+print("----------------------------------")
 
 numjogadores = 0
 
@@ -15,7 +16,7 @@ while numJogadores < 2:
 listajogadores = []
 
 for i in range(numJogadores):
-    nome = input("Qual é o nome do jogador" + str (i+1) + ": " )
+    nome = input("Qual é o nome do jogador " + str (i+1) + ": " )
     listajogadores.append(nome)
     print(listajogadores)
 
@@ -34,7 +35,10 @@ tiros = 0
 passos = 0
 qtddados = 0
 
+print("-------------------------------------------------------------------")
 print("INICIANDO O JOGO...")
+print("-------------------------------------------------------------------")
+
 while True:
     print("TURNO DO JOGADOR", listajogadores[jogadorAtual])
     for i in range(0,3):
@@ -75,15 +79,19 @@ while True:
         passos = 0
         cerebros = 0
         print("Finalizando a rodada...")
+        print("-------------------------------------------------------------------")
     else:
-        continuar = input("Você deseja continuar jogando os dados? sim ou nao: ")
-        if continuar == "n":
+        print("-------------------------------------------------------------------")
+        continuar = input("Você deseja continuar jogando os dados? digite 'sim' ou 'nao': ")
+        if continuar == "nao":
             jogadorAtual = jogadorAtual + 1
             dadosSorteados = []
             tiros = 0
             passos = 0
             cerebros = 0
             print("Finalizando a rodada...")
+            print("-------------------------------------------------------------------")
         else:
             print("Iniciando mais uma rodada do turno atual...")
+            print("-------------------------------------------------------------------")
             dadosSorteados = []
